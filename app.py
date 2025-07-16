@@ -6,6 +6,8 @@ import sqlite3
 
 from pathlib import Path
 
+
+
 # app.py 위치(Path) → 상위 폴더(Path)
 base_dir = Path(__file__).parent
 
@@ -32,6 +34,10 @@ def init_db():
         if conn:
             connection.close_connection(conn)
 
+
+if not (Path(__file__).parent / 'project.db').exists():
+    init_db()
+    
 def main():
     """Streamlit 애플리케이션의 메인 함수"""
     st.set_page_config(page_title="My Note App", layout="wide")
