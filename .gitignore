@@ -1,0 +1,14 @@
+# 가상환경
+.venv/
+venv/
+env/
+
+# SQLite 데이터베이스
+*.db
+
+# Python 바이트코드
+__pycache__/
+*.pyc
+
+# VSCode 설정
+.vscode/
