@@ -35,9 +35,9 @@ def init_db():
             connection.close_connection(conn)
 
 
-if not (Path(__file__).parent / 'project.db').exists():
+if not (Path(__file__).parent / 'sqlite_note_app' /'project.db').exists():
     init_db()
-    
+
 def main():
     """Streamlit 애플리케이션의 메인 함수"""
     st.set_page_config(page_title="My Note App", layout="wide")
